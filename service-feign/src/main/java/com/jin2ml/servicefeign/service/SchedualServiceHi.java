@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @author jin2ml
  * @date 2019-03-25
  */
-@FeignClient(value = "eureka-client")
+@FeignClient(value = "eureka-client", fallback = SchedualServiceHiHystric.class)
 public interface SchedualServiceHi {
     /**
      * test
